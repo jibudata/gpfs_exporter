@@ -111,7 +111,7 @@ func (c MmwatchCollector) Collect(ch chan<- prometheus.Metric) {
 }
 
 func mmwatchExec(ctx context.Context) (string, error) {
-	cmd := execCommand(ctx, *sudoCmd, "mmwatch", "all", "status", "-Y")
+	cmd := execCommand(ctx, *sudoCmd, "/usr/lpp/mmfs/bin/mmwatch", "all", "status", "-Y")
 	var out bytes.Buffer
 	cmd.Stdout = &out
 	err := cmd.Run()
