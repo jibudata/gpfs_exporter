@@ -31,7 +31,7 @@ import (
 var (
 	osHostname           = os.Hostname
 	configNodeName       = kingpin.Flag("collector.mmces.nodename", "CES node name to check, defaults to FQDN").Default("").String()
-	mmcesTimeout         = kingpin.Flag("collector.mmces.timeout", "Timeout for mmces execution").Default("5").Int()
+	mmcesTimeout         = kingpin.Flag("collector.mmces.timeout", "Timeout for mmces execution").Default("30").Int()
 	mmcesIgnoredServices = kingpin.Flag("collector.mmces.ignored-services", "Regex of services to ignore").Default("^$").String()
 	cesServices          = []string{"AUTH", "BLOCK", "NETWORK", "AUTH_OBJ", "NFS", "OBJ", "SMB", "CES"}
 	cesStates            = []string{"DEGRADED", "DEPEND", "DISABLED", "FAILED", "HEALTHY", "STARTING", "STOPPED", "SUSPENDED"}

@@ -32,7 +32,7 @@ mmwatch:watchNodeStatus:0:1::::CLW1681130306:jibufs::7802268055787884788:janode3
 	mmwatchStdoutFailed = `
 mmwatch:watchStatus:HEADER:version:RESERVED:RESERVED:RESERVED:watchID:device:fileset:clusterID:watchPath:watchType:watchState:RESERVED:RESERVED:RESERVED:
 mmwatch:watchNodeStatus:HEADER:version:RESERVED:RESERVED:RESERVED:watchID:device:fileset:clusterID:nodeName:nodeStatus:watchProcessType:RESERVED:RESERVED:RESERVED:
-mmwatch:watchStatus:0:1::::CLW1681130306:jibufs::7802268055787884788:%2Fjibufs:FSYS:Failed::::
+mmwatch:watchStatus:0:1::::CLW1681130306:jibufs::7802268055787884788:%2Fjibufs:FSYS:Active::::
 mmwatch:watchNodeStatus:0:1::::CLW1681130306:jibufs::7802268055787884788:janode1:FAILED:conduit::::
 mmwatch:watchNodeStatus:0:1::::CLW1681130306:jibufs::7802268055787884788:janode2:FAILED:conduit::::
 mmwatch:watchNodeStatus:0:1::::CLW1681130306:jibufs::7802268055787884788:janode3:FAILED:conduit::::
@@ -154,7 +154,7 @@ func TestMmwatchCollectorError(t *testing.T) {
 	expected := `
 		# HELP gpfs_watch_status GPFS watch status
 		# TYPE gpfs_watch_status gauge
-		gpfs_watch_status{device="jibufs",watchid="CLW1681130306",watchpath="/jibufs",watchstate="Failed"} 1
+		gpfs_watch_status{device="jibufs",watchid="CLW1681130306",watchpath="/jibufs",watchstate="Active"} 1
 		# HELP gpfs_watch_node_status GPFS node status
 		# TYPE gpfs_watch_node_status gauge
 		gpfs_watch_node_status{nodename="janode1",nodestatus="FAILED"} 1

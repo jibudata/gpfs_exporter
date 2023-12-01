@@ -27,7 +27,7 @@ import (
 )
 
 var (
-	mmwatchTimeout = kingpin.Flag("collector.mmwatch.timeout", "Timeout for mmwatch execution").Default("10").Int()
+	mmwatchTimeout = kingpin.Flag("collector.mmwatch.timeout", "Timeout for mmwatch execution").Default("30").Int()
 	//watchStates    = []string{"HEALTHY", "SUSPENDED", "DOWN"}
 	watchSections = []string{"watchStatus", "watchNodeStatus"}
 	//mmwatchMap     = map[string]string{
